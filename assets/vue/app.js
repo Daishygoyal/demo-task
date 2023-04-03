@@ -1,12 +1,6 @@
-import Vue, {createApp} from 'vue';
-import FirstComponent from './components/FirstComponent.vue';
+import { createApp } from 'vue'
+import App from './app.vue'
+import router from './router'
 
-const app = createApp({
-    el: '#app',
-    components: {
-        FirstComponent
-    },
-    template: '<FirstComponent />'
-});
 
-app.mount('#app');
+createApp(App).use(router).mount('#app')
